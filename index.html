@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+						### Planning for the future
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+						### Framework Architecture
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+						### Implementation Architecture
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+						### What is Flexibility?
+						* Deployability
+						* Scalibility
+						* Testability
+						* Maintainability
+
+						https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b
+
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+				<section data-markdown>
+					<textarea data-template>
+
+						### Flexible Data
+						* Data as a Service
+						* ORM Wrapper
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+						### Supporting Custom Code
+						* OData
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+						### Extending Workflow
+						* Pipes And Filters
+						* Builder
+							* Chain of Responsibility
+						* Adapter 
+						* Decorator
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Extending Development
+						* Seams / Integration Points
+							* Interfaces
+							* Virtual Methods
+							* High Level Abstractions
+						* IOC Containers
+						* Config Drive IOC
+					</textarea>
+				</section>
+				<section data-markdown>
+						<textarea data-template>
+							### Extending Architecture (Behavioral Patterns)
+							* Communication Patterns/Technologies
+								* Pub Sub, Observer, Mediator
+								* Message Queue/Bus
+						</textarea>
+					</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+						<textarea data-template>
+	
+							###  Patterns for success
+							* Component Based Frameworks (Anugular/React/Vue)
+								* Npm
+							* Minimal Features
+							* Minimal Structure
+							* Maximum Extendability
+
+						</textarea>
+					</section>
+				<section data-markdown>
+						<textarea data-template>
+	
+							###  Storing Page Data
+							* JSON - Document DB
+								* trade off relationships for Flexibility
+								* speed shouldn't be an issue here because, the front end facing bit will be separate from the admin bit.
+						</textarea>
+					</section>
+				<section data-markdown>
+					<textarea data-template>
+
+						###  Feature Depth
+						* Minimal
+							* Modify Text
+						* Medium
+							* Styling
+							* Preview
+						* Maximum
+							* Layout
+							* Templating
+
+						UX Tradeoff
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+						###  Backend Tooling/ Admin UI
+						* What / Why
+						* How
+						* Built in Ecosystem
+							* Page Updates
+							* Page Workflow
+
+						Static HTML, Isomorphic
+						
+						Show picture
+					</textarea>
+				</section>
+			</section>
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+								### Monolith vs Microservices
+								*thing
+							</textarea>
+				</section>
+			</section>
+			
+			<!-- ////////////////////////////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+							### Fundamentals in Flexibility
+							* Minimal Decisions
+							* High & Low Level APIs
+							* Low Coupling
+							* Independence / Single Responsibility
+								* Clear Architectural Bounds/ Separation
+
+							### Techniques that give us feedback
+							* Unit Testing
+						</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+							### Seams/Services/Features
+							* Backend Toolin UI
+							* Database
+							* Custom Development
+							* Extending Features
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Allure of the Prepackaged solution
+						* "Cheaper" that full custom
+						
+						### Drawbacks
+						* Coupled to Decisions
+							* Data
+							* Api
+						* Predetermined Flexibility
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						Consulatant to (Very Technical) CLient, Weighing Options of  Prepackaged vs Custom
+						Persona Consuming the Platform and Developing the Platform
+						Project Develop CMS as a Product and Use that Product
+						### Mindest / Persona Conversation
+						* Upgrading Sitefintiy
+							* Prepackaged vs Flexible vs Hybrid
+						* Selling the idea
+						<br>
+						<br>
+						
+						### Themes
+						* Consulting
+						* Clean Code
+						* Flexibility
+						* Architecture
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						## Prepackaged CMS Case Study
+						<br>
+						<sub><sup>John Gomes</sup></sub>
+					</textarea>
+				</section>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true }
+			]
+		});
+	</script>
+</body>
+
+</html>
