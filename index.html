@@ -7,12 +7,16 @@
 
 	<title>reveal.js</title>
 
-	<link rel="stylesheet" href="css/reset.css">
+
+	<link rel="stylesheet" href="css/custom.css">
+	<!-- <link rel="stylesheet" href="css/reset.css"> -->
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="css/theme/custom.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
+	<link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Viga&display=swap" rel="stylesheet">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -27,6 +31,184 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
+
+			<!-- /////////Flexibility Rabit Hole/////////////// -->
+			<section>
+
+					<section data-markdown>
+							<textarea data-template>
+								### Devil's Advocate
+								* Product Lock-In
+								* Version Lock-In - AngularJs vs Angular2
+								* Architecture Lock-In
+								* Platform Lock-In
+								* Skills Lock-In
+								* Mental Lock-In
+								https://martinfowler.com/articles/oss-lockin.html
+								Gregor Hohpe
+
+								### Keep in Mind
+								* MVP, YAGNI
+								* 80/20
+								* Effort, Expense, Complexity
+							</textarea>
+					</section>
+
+					<section data-markdown>
+							<textarea data-template>
+								### Lock-In Matrix
+							
+								![matrix](css/lockin_matrix.png)
+								
+								![example](css/lockin_example.jpg)
+						
+							</textarea>
+					</section>
+
+					<section data-markdown>
+							<textarea data-template>
+								### The Pursuit of Standardization
+								* Open Standards : https://opensource.com/resources/what-are-open-standards
+								* Twitter : Open Standard
+									* https://www.axios.com/twitter-aims-to-build-an-open-standard-for-social-networks-156c6bbf-b2a8-4445-9453-3e029f6bc4f1.html
+								* OAuth
+									* https://en.wikipedia.org/wiki/OAuth
+							</textarea>
+					</section>
+			</section>
+
+
+			<!-- //////////Prepackaged CMS Case Study/////////// -->
+			<section>
+				<section>
+					<h1 class="title__title">Prepackaged CMS Case Study</h1>
+					<br>
+					<p class="title__tagline">John Gomes</p>
+				</section>
+
+
+				<section data-markdown>
+					<textarea data-template>
+						### Goals
+						* Theorycraft a Flexible CMS Platform
+							* Lay Ground Work
+							* Architecture
+							* Design patterns
+							* Discuss considerations & trade offs
+						* Mock Project Architecture use the Flexible CMS
+							* High level implementation discuss
+
+							http://www.blackwasp.co.uk/gofpatterns.aspx
+
+						### Personas
+						* Creating a Flexible CMS solution (Creator)
+						* Consuming a Flexible CMS solution (Consumer)
+						* Comparison to Prepackaged solution (Consultant)
+						
+						### Themes
+						* Consulting
+						* Clean Code
+						* Flexibility
+						* Architecture
+					</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						### Allure of the Prepackaged solution
+						* Future Proofing (Business Requirements/Features)
+							* "I'm sure I'll use that in the future!"
+							* Swiss Army Knife
+						* "Cheaper" than a custom
+							* "That's *pretty much* exactly what I want!"
+							* Everything is already designed
+						
+						### Considerations
+						* Coupled to Decisions
+							* Data
+							* Api
+						* Predetermined Flexibility
+						* Breaking the mold can be painful
+							* Slower Custom Development
+							* Less Ownership
+							* Settling for less than
+							* More complex solutions
+					</textarea>
+				</section>
+
+
+				
+
+			</section>
+			<!-- /////////What is Flexibility/////////////// -->
+			<section>
+
+					<section data-markdown>
+							<textarea data-template>
+
+									### What does Flexibility mean?
+									* Options
+									* Future Proofing (Extending)
+									* Assuming you will know better in the future
+									* Allowing for Change
+									* Adapt/Change/Grow
+
+									http://www.softwarearchitecturenotes.com/architectureRequirements.html
+		
+									### Fundamentals in Flexibility (S.O.L.I.D)
+									* Options
+										* Sandbox vs Railroad
+										* MVP (Defer Decisions)
+									* Low Coupling
+										* Data
+										* Dependencies
+									* Adaptability
+									* Independence / Single Responsibility
+										* Clear Architectural Bounds/ Separation
+									* Insurance (Cost of Insurance)
+
+
+		
+									### Techniques that give us feedback
+									* Unit Testing
+								</textarea>
+						</section>
+						<section data-markdown>
+							<textarea data-template>
+		
+									### Seams/Services/Features
+									* Custom Development
+									* Extending Features/Workflows
+									* Data/Storage
+									* Backend/Admin Tooling UI
+
+									https://www.phillipsj.net/posts/creating-seams/
+								</textarea>
+						</section>
+		
+						<section data-markdown>
+								<textarea data-template>
+		
+								
+		
+								### What Does Flexibility Impact ? (Laying the Groundwork)
+								* Flexibility -> Modularity -> Agility (Reacting to Change)
+								* `+` Testability
+								* `+` Deployability
+								* `+` Scalibility
+								* `+` Maintainability
+								* `+` Adaptability
+								* `-` Efficiency
+								* `-` Integrity
+		
+								https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b
+		
+								</textarea>
+							</section>
+						
+			</section>
+
+			<!-- ////////////////////////////////// -->
 			<section>
 				<section data-markdown>
 					<textarea data-template>
@@ -34,49 +216,19 @@
 					</textarea>
 				</section>
 			</section>
-			<!-- ////////////////////////////////// -->
+			<!-- ///////////Data/////////////// -->
 			<section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### Framework Architecture
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### Implementation Architecture
-					</textarea>
-				</section>
-			</section>
-			<!-- ////////////////////////////////// -->
-			<section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### What is Flexibility?
-						* Deployability
-						* Scalibility
-						* Testability
-						* Maintainability
-
-						https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b
-
-					</textarea>
-				</section>
-			</section>
-			<!-- ////////////////////////////////// -->
 				<section data-markdown>
 					<textarea data-template>
 
 						### Flexible Data
 						* Data as a Service
 						* ORM Wrapper
+
+						https://jsonapi.org/
+						
 					</textarea>
 				</section>
-			</section>
-			<!-- ////////////////////////////////// -->
-			<section>
 				<section data-markdown>
 					<textarea data-template>
 
@@ -85,7 +237,8 @@
 					</textarea>
 				</section>
 			</section>
-			<!-- ////////////////////////////////// -->
+
+			<!-- ///////////Extending//////// -->
 			<section>
 				<section data-markdown>
 					<textarea data-template>
@@ -110,69 +263,18 @@
 					</textarea>
 				</section>
 				<section data-markdown>
-						<textarea data-template>
+					<textarea data-template>
 							### Extending Architecture (Behavioral Patterns)
 							* Communication Patterns/Technologies
 								* Pub Sub, Observer, Mediator
 								* Message Queue/Bus
+
+
+								https://en.wikipedia.org/wiki/Behavioral_pattern
 						</textarea>
-					</section>
-			</section>
-			<!-- ////////////////////////////////// -->
-			<section>
-				<section data-markdown>
-						<textarea data-template>
-	
-							###  Patterns for success
-							* Component Based Frameworks (Anugular/React/Vue)
-								* Npm
-							* Minimal Features
-							* Minimal Structure
-							* Maximum Extendability
-
-						</textarea>
-					</section>
-				<section data-markdown>
-						<textarea data-template>
-	
-							###  Storing Page Data
-							* JSON - Document DB
-								* trade off relationships for Flexibility
-								* speed shouldn't be an issue here because, the front end facing bit will be separate from the admin bit.
-						</textarea>
-					</section>
-				<section data-markdown>
-					<textarea data-template>
-
-						###  Feature Depth
-						* Minimal
-							* Modify Text
-						* Medium
-							* Styling
-							* Preview
-						* Maximum
-							* Layout
-							* Templating
-
-						UX Tradeoff
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-						###  Backend Tooling/ Admin UI
-						* What / Why
-						* How
-						* Built in Ecosystem
-							* Page Updates
-							* Page Workflow
-
-						Static HTML, Isomorphic
-						
-						Show picture
-					</textarea>
 				</section>
 			</section>
+
 			<!-- ////////////////////////////////// -->
 			<section>
 				<section data-markdown>
@@ -183,75 +285,93 @@
 							</textarea>
 				</section>
 			</section>
-			
-			<!-- ////////////////////////////////// -->
+
+			<!-- /////////Backend Tooling/ Admin UI/////////// -->
 			<section>
 				<section data-markdown>
 					<textarea data-template>
 
-							### Fundamentals in Flexibility
-							* Minimal Decisions
-							* High & Low Level APIs
-							* Low Coupling
-							* Independence / Single Responsibility
-								* Clear Architectural Bounds/ Separation
+											###  Patterns for success
+											* Component Based Frameworks (Anugular/React/Vue)
+												* Npm
+											* Minimal Features
+											* Minimal Structure
+											* Maximum Extendability
+				
+										</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
 
-							### Techniques that give us feedback
-							* Unit Testing
+											###  Storing Page Data
+											* JSON - Document DB
+												* trade off relationships for Flexibility
+												* speed shouldn't be an issue here because, the front end facing bit will be separate from the admin bit.
+										</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+										###  Feature Depth
+										* Minimal
+											* Modify Text
+										* Medium
+											* Styling
+											* Preview
+										* Maximum
+											* Layout
+											* Templating
+				
+										UX Tradeoff
+									</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
+										###  Backend Tooling/ Admin UI
+										* What / Why
+										* How
+										* Built in Ecosystem
+											* Page Updates
+											* Page Workflow
+				
+										Static HTML, Isomorphic
+										
+										Show picture
+									</textarea>
+				</section>
+			</section>
+
+			<!-- //////////Final Architecture/////////// -->
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+							### Framework Architecture
 						</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 
-							### Seams/Services/Features
-							* Backend Toolin UI
-							* Database
-							* Custom Development
-							* Extending Features
+							### Implementation Architecture
 						</textarea>
 				</section>
+			</section>
 
-				<section data-markdown>
-					<textarea data-template>
-						### Allure of the Prepackaged solution
-						* "Cheaper" that full custom
-						
-						### Drawbacks
-						* Coupled to Decisions
-							* Data
-							* Api
-						* Predetermined Flexibility
-					</textarea>
-				</section>
+			
 
-				<section data-markdown>
-					<textarea data-template>
-						Consulatant to (Very Technical) CLient, Weighing Options of  Prepackaged vs Custom
-						Persona Consuming the Platform and Developing the Platform
-						Project Develop CMS as a Product and Use that Product
-						### Mindest / Persona Conversation
-						* Upgrading Sitefintiy
-							* Prepackaged vs Flexible vs Hybrid
-						* Selling the idea
-						<br>
-						<br>
-						
-						### Themes
-						* Consulting
-						* Clean Code
-						* Flexibility
-						* Architecture
-					</textarea>
-				</section>
+			<!-- /////////// NOTES /////////////// -->
+			<section>
 
-				<section data-markdown>
-					<textarea data-template>
-						## Prepackaged CMS Case Study
-						<br>
-						<sub><sup>John Gomes</sup></sub>
-					</textarea>
-				</section>
-
+					<section data-markdown>
+							<textarea data-template>
+								### notes
+								* JSON (Locked-In) - POLYGLOT (Programming and Databases)
+									* Caution -- https://martinfowler.com/articles/oss-lockin.html
+								* 80/20 rule inreagards to flexibility
+									* Diminishing Returns
+							</textarea>
+					</section>
 			</section>
 		</div>
 	</div>
@@ -263,6 +383,11 @@
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
 		Reveal.initialize({
+			// width: "100%",
+			// height: "100%",
+			// margin: .05,
+			// minScale: 1,
+			// maxScale: 1,
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
