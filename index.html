@@ -26,58 +26,33 @@
 		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
+	<script src="./css/css-doodle.min.js"></script>
 </head>
 
 <body>
+
 	<div class="reveal">
+		<css-doodle>
+			:doodle {
+			@grid: 100 / 100vw;
+			}
+			transform: scale(@rand(.2, .9));
+			:container {
+			grid-gap: 1px;
+			transform: rotate(45deg) scale(1.5);
+			}
+
+			@random(.2) {
+			:after {
+			content: ' ';
+			background: hsl(@rand(360), 60%, 70%);
+			@size: @r(3px, 15px);
+			color:white;
+			}
+			opacity: @pick-d(.15, .2, .1);
+			}
+		</css-doodle>
 		<div class="slides">
-
-			<!-- /////////Flexibility Rabit Hole/////////////// -->
-			<section>
-
-					<section data-markdown>
-							<textarea data-template>
-								### Devil's Advocate
-								* Product Lock-In
-								* Version Lock-In - AngularJs vs Angular2
-								* Architecture Lock-In
-								* Platform Lock-In
-								* Skills Lock-In
-								* Mental Lock-In
-								https://martinfowler.com/articles/oss-lockin.html
-								Gregor Hohpe
-
-								### Keep in Mind
-								* MVP, YAGNI
-								* 80/20
-								* Effort, Expense, Complexity
-							</textarea>
-					</section>
-
-					<section data-markdown>
-							<textarea data-template>
-								### Lock-In Matrix
-							
-								![matrix](css/lockin_matrix.png)
-								
-								![example](css/lockin_example.jpg)
-						
-							</textarea>
-					</section>
-
-					<section data-markdown>
-							<textarea data-template>
-								### The Pursuit of Standardization
-								* Open Standards : https://opensource.com/resources/what-are-open-standards
-								* Twitter : Open Standard
-									* https://www.axios.com/twitter-aims-to-build-an-open-standard-for-social-networks-156c6bbf-b2a8-4445-9453-3e029f6bc4f1.html
-								* OAuth
-									* https://en.wikipedia.org/wiki/OAuth
-							</textarea>
-					</section>
-			</section>
-
-
 			<!-- //////////Prepackaged CMS Case Study/////////// -->
 			<section>
 				<section>
@@ -94,12 +69,17 @@
 							* Lay Ground Work
 							* Architecture
 							* Design patterns
+							* Clean Code
 							* Discuss considerations & trade offs
-						* Mock Project Architecture use the Flexible CMS
+						* Mock Architecture Diagram using Flexible CMS Platform
 							* High level implementation discuss
 
 							http://www.blackwasp.co.uk/gofpatterns.aspx
+					</textarea>
+				</section>
 
+				<section data-markdown>
+					<textarea data-template>
 						### Personas
 						* Creating a Flexible CMS solution (Creator)
 						* Consuming a Flexible CMS solution (Consumer)
@@ -118,7 +98,8 @@
 						### Allure of the Prepackaged solution
 						* Future Proofing (Business Requirements/Features)
 							* "I'm sure I'll use that in the future!"
-							* Swiss Army Knife
+							* Swiss Army Knife (Ecosystem)
+							* Black Friday Shopping
 						* "Cheaper" than a custom
 							* "That's *pretty much* exactly what I want!"
 							* Everything is already designed
@@ -127,6 +108,7 @@
 						* Coupled to Decisions
 							* Data
 							* Api
+							* Workflow
 						* Predetermined Flexibility
 						* Breaking the mold can be painful
 							* Slower Custom Development
@@ -137,45 +119,53 @@
 				</section>
 
 
-				
+
 
 			</section>
+
 			<!-- /////////What is Flexibility/////////////// -->
 			<section>
 
-					<section data-markdown>
-							<textarea data-template>
+				<section data-markdown>
+					<textarea data-template>
 
-									### What does Flexibility mean?
-									* Options
-									* Future Proofing (Extending)
-									* Assuming you will know better in the future
-									* Allowing for Change
-									* Adapt/Change/Grow
+						### What does Flexibility mean?
+						* Options
+							* Future Proofing (Extending)
+							* Allowing for Change
+							* Adapt/Change/Grow
+						* Assuming you will know better in the future
+							* Waterfall v Agile
+							* Social - Forming,Storming,Norming,Performing
 
-									http://www.softwarearchitecturenotes.com/architectureRequirements.html
-		
-									### Fundamentals in Flexibility (S.O.L.I.D)
-									* Options
-										* Sandbox vs Railroad
-										* MVP (Defer Decisions)
-									* Low Coupling
-										* Data
-										* Dependencies
-									* Adaptability
-									* Independence / Single Responsibility
-										* Clear Architectural Bounds/ Separation
-									* Insurance (Cost of Insurance)
+						http://www.softwarearchitecturenotes.com/architectureRequirements.html
 
+					</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+										### Fundamentals in Flexibility (S.O.L.I.D)
+										* Options
+											* Sandbox vs Railroad
+											* MVP (Defer Decisions)
+										* Low Coupling
+											* Data
+											* Dependencies
+										* Adaptability
+										* Independence / Single Responsibility
+											* Clear Architectural Bounds/ Separation
+										* Insurance (Cost of Insurance)
 
-		
-									### Techniques that give us feedback
-									* Unit Testing
-								</textarea>
-						</section>
-						<section data-markdown>
-							<textarea data-template>
-		
+										### Techniques that give us feedback
+										* Unit Testing
+										* Adding New Features
+										* Theory Crafting New Features
+										* Load/Stress testing
+									</textarea>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+
 									### Seams/Services/Features
 									* Custom Development
 									* Extending Features/Workflows
@@ -184,13 +174,13 @@
 
 									https://www.phillipsj.net/posts/creating-seams/
 								</textarea>
-						</section>
-		
-						<section data-markdown>
-								<textarea data-template>
-		
-								
-		
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+
+
+
 								### What Does Flexibility Impact ? (Laying the Groundwork)
 								* Flexibility -> Modularity -> Agility (Reacting to Change)
 								* `+` Testability
@@ -204,56 +194,60 @@
 								https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b
 		
 								</textarea>
-							</section>
-						
+				</section>
+
 			</section>
 
-			<!-- ////////////////////////////////// -->
+
+			<!-- /////////Flexibility Rabit Hole/////////////// -->
+			<section>
+
+				<section data-markdown>
+					<textarea data-template>
+							### Devil's Advocate
+							* Product Lock-In
+							* Version Lock-In - AngularJs vs Angular2
+							* Architecture Lock-In
+							* Platform Lock-In
+							* Skills Lock-In
+							* Mental Lock-In
+							https://martinfowler.com/articles/oss-lockin.html
+							Gregor Hohpe
+
+							### Keep in Mind
+							* MVP, YAGNI, 80/20
+							* Effort, Expense, Complexity
+						</textarea>
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+							### Lock-In Matrix
+							<div style="display:flex; justify-content: space-evenly; background-color: white;">
+							<img  src="css/lockin_matrix.png">
+							<img  src="css/lockin_example.jpg">
+							</div>
+					
+						</textarea>
+				</section>
+
+				<!-- <section data-markdown>
+					<textarea data-template>
+							### The Pursuit of Standardization
+							* Open Standards : https://opensource.com/resources/what-are-open-standards
+							* Twitter : Open Standard
+								* https://www.axios.com/twitter-aims-to-build-an-open-standard-for-social-networks-156c6bbf-b2a8-4445-9453-3e029f6bc4f1.html
+							* OAuth
+								* https://en.wikipedia.org/wiki/OAuth
+						</textarea>
+				</section> -->
+			</section>
+
+			<!-- ///////////Flexibles//////// -->
 			<section>
 				<section data-markdown>
 					<textarea data-template>
-						### Planning for the future
-					</textarea>
-				</section>
-			</section>
-			<!-- ///////////Data/////////////// -->
-			<section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### Flexible Data
-						* Data as a Service
-						* ORM Wrapper
-
-						https://jsonapi.org/
-						
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### Supporting Custom Code
-						* OData
-					</textarea>
-				</section>
-			</section>
-
-			<!-- ///////////Extending//////// -->
-			<section>
-				<section data-markdown>
-					<textarea data-template>
-
-						### Extending Workflow
-						* Pipes And Filters
-						* Builder
-							* Chain of Responsibility
-						* Adapter 
-						* Decorator
-					</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						### Extending Development
+						### Flexible Custom Development
 						* Seams / Integration Points
 							* Interfaces
 							* Virtual Methods
@@ -264,81 +258,86 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-							### Extending Architecture (Behavioral Patterns)
-							* Communication Patterns/Technologies
-								* Pub Sub, Observer, Mediator
-								* Message Queue/Bus
-
-
-								https://en.wikipedia.org/wiki/Behavioral_pattern
-						</textarea>
+						### Flexible Workflow
+						* Pipes And Filters
+							* Builder
+							* Chain of Responsibility
+						* Adapter 
+						* Decorator
+					</textarea>
 				</section>
-			</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Flexible Architecture (Behavioral Patterns)
+						* Communication Patterns/Technologies
+							* Pub Sub, Observer, Mediator
+								* Message Queue/Bus (ESB)
+						* Microservices
 
-			<!-- ////////////////////////////////// -->
-			<section>
+
+							https://en.wikipedia.org/wiki/Behavioral_pattern
+					</textarea>
+				</section>
 				<section data-markdown>
 					<textarea data-template>
 
-								### Monolith vs Microservices
-								*thing
-							</textarea>
+						### Flexible Data
+						* Multi Schema
+						* Multi Databases 
+							* SQL + NoSQL + Graph
+						* ORM Wrapper
+						* OData
+						* Code First
+
+						https://jsonapi.org/
+						
+					</textarea>
 				</section>
 			</section>
 
 			<!-- /////////Backend Tooling/ Admin UI/////////// -->
 			<section>
+
 				<section data-markdown>
 					<textarea data-template>
 
-											###  Patterns for success
-											* Component Based Frameworks (Anugular/React/Vue)
-												* Npm
-											* Minimal Features
-											* Minimal Structure
-											* Maximum Extendability
-				
-										</textarea>
+							###  Backend Tooling/ Admin UI
+							* What / Why
+							* How
+							* Built in Ecosystem
+								* Page Updates
+								* Page Workflow
+	
+							Static HTML, Isomorphic
+						</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
 
-											###  Storing Page Data
-											* JSON - Document DB
-												* trade off relationships for Flexibility
-												* speed shouldn't be an issue here because, the front end facing bit will be separate from the admin bit.
-										</textarea>
+							###  Feature Depth
+							* Minimal
+								* Modify Text
+							* Medium
+								* Styling
+								* Preview
+							* Maximum
+								* Layout
+								* Templating
+	
+							UX Tradeoff
+						</textarea>
 				</section>
+
 				<section data-markdown>
 					<textarea data-template>
+						###  Patterns for success
+						* Component Based Frameworks (Anugular/React/Vue)
+							* Npm
+						* Minimal Features
+						* Minimal Structure
+						* Maximum Extendability
 
-										###  Feature Depth
-										* Minimal
-											* Modify Text
-										* Medium
-											* Styling
-											* Preview
-										* Maximum
-											* Layout
-											* Templating
-				
-										UX Tradeoff
-									</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-										###  Backend Tooling/ Admin UI
-										* What / Why
-										* How
-										* Built in Ecosystem
-											* Page Updates
-											* Page Workflow
-				
-										Static HTML, Isomorphic
-										
-										Show picture
-									</textarea>
+					</textarea>
 				</section>
 			</section>
 
@@ -346,7 +345,6 @@
 			<section>
 				<section data-markdown>
 					<textarea data-template>
-
 							### Framework Architecture
 						</textarea>
 				</section>
@@ -358,20 +356,22 @@
 				</section>
 			</section>
 
-			
+
 
 			<!-- /////////// NOTES /////////////// -->
 			<section>
 
-					<section data-markdown>
-							<textarea data-template>
+				<section data-markdown>
+					<textarea data-template>
 								### notes
 								* JSON (Locked-In) - POLYGLOT (Programming and Databases)
 									* Caution -- https://martinfowler.com/articles/oss-lockin.html
 								* 80/20 rule inreagards to flexibility
 									* Diminishing Returns
+								* Planning for the future
+								* Monolith vs Microservices
 							</textarea>
-					</section>
+				</section>
 			</section>
 		</div>
 	</div>

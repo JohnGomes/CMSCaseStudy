@@ -19,7 +19,6 @@ a {
 }
 
 img {
-    background-color:white;
     height: 35vh;
 }
 
@@ -46,7 +45,16 @@ img {
     top: 0;
     left: 0;
     justify-content: center;
-    margin-left: 75px; }
+    margin-left: 75px; 
+
+    background-color: rgba(0,0,0,.5);
+    margin: 2.5%;
+    padding: 25px;
+    width: 90%;
+    height: 92% !important;
+    border-radius: 20px;
+
+}
     .reveal .title__title {
       font-size: 3em !important;
       font-family: "Viga", sans-serif !important;
