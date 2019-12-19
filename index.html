@@ -12,6 +12,7 @@
 	<!-- <link rel="stylesheet" href="css/reset.css"> -->
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/custom.css">
+	<link  rel="stylesheet" href="./css/bootstrap.min.css"></style>
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/monokai.css">
@@ -27,6 +28,7 @@
 		document.getElementsByTagName('head')[0].appendChild(link);
 	</script>
 	<script src="./css/css-doodle.min.js"></script>
+	<script src="./css/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -56,6 +58,7 @@
 			<!-- //////////Prepackaged CMS Case Study/////////// -->
 			<section>
 				<section>
+					<img class="float-right icon" src="./css/images/boxes.svg"/>
 					<h1 class="title__title">Prepackaged CMS Case Study</h1>
 					<br>
 					<p class="title__tagline">John Gomes</p>
@@ -64,6 +67,8 @@
 
 				<section data-markdown>
 					<textarea data-template>
+						<img class="float-right icon" src="./css/images/bullseye.svg"/>
+
 						### Goals
 						* Theorycraft a Flexible CMS Platform
 							* Lay Ground Work
@@ -71,15 +76,17 @@
 							* Design patterns
 							* Clean Code
 							* Discuss considerations & trade offs
-						* Mock Architecture Diagram using Flexible CMS Platform
+						* Review Mock Architecture Diagram using Flexible CMS Platform
 							* High level implementation discuss
 
-							http://www.blackwasp.co.uk/gofpatterns.aspx
+							
 					</textarea>
 				</section>
 
 				<section data-markdown>
 					<textarea data-template>
+						<img class="float-right icon" src="./css/images/users.svg"/>
+
 						### Personas
 						* Creating a Flexible CMS solution (Creator)
 						* Consuming a Flexible CMS solution (Consumer)
@@ -95,26 +102,22 @@
 
 				<section data-markdown>
 					<textarea data-template>
+						<img class="float-right icon" src="./css/images/wizard-hat.svg"/>
+
 						### Allure of the Prepackaged solution
 						* Future Proofing (Business Requirements/Features)
-							* "I'm sure I'll use that in the future!"
 							* Swiss Army Knife (Ecosystem)
-							* Black Friday Shopping
 						* "Cheaper" than a custom
 							* "That's *pretty much* exactly what I want!"
 							* Everything is already designed
 						
 						### Considerations
 						* Coupled to Decisions
-							* Data
-							* Api
-							* Workflow
+							* Data, Api, Workflow
 						* Predetermined Flexibility
-						* Breaking the mold can be painful
-							* Slower Custom Development
-							* Less Ownership
-							* Settling for less than
-							* More complex solutions
+						* Breaking the packaging can be painful
+							* Slow, Difficult, Complex Development
+							* Making Concessions
 					</textarea>
 				</section>
 
@@ -128,11 +131,17 @@
 
 				<section data-markdown>
 					<textarea data-template>
+						<img class="float-right icon" src="./css/images/question.svg"/>
 
 						### What does Flexibility mean?
+						`The quality of bending easily without breaking.`
+
+						`The ability to be easily modified.`
+
+						`Willingness to change or compromise.`
+
 						* Options
-							* Future Proofing (Extending)
-							* Allowing for Change
+							* Extending (Enabling Future Decisions/Changes)
 							* Adapt/Change/Grow
 						* Assuming you will know better in the future
 							* Waterfall v Agile
@@ -144,36 +153,36 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-										### Fundamentals in Flexibility (S.O.L.I.D)
-										* Options
-											* Sandbox vs Railroad
-											* MVP (Defer Decisions)
-										* Low Coupling
-											* Data
-											* Dependencies
-										* Adaptability
-										* Independence / Single Responsibility
-											* Clear Architectural Bounds/ Separation
-										* Insurance (Cost of Insurance)
+						<img class="float-right icon" src="./css/images/vial.svg"/>
+		
+						### Fundamentals in Flexibility (S.O.L.I.D)
+						* Options
+							* Sandbox vs Railroad
+							* MVP (Defer Decisions)
+						* Low Coupling
+						* Adaptability
+						* Clear Architectural Bounds/ Separation
+						* Insurance (Cost of Insurance)
 
-										### Techniques that give us feedback
-										* Unit Testing
-										* Adding New Features
-										* Theory Crafting New Features
-										* Load/Stress testing
-									</textarea>
+						### Techniques that give us feedback
+						* Unit Testing
+						* Adding New Features
+						* Theory Crafting New Features
+						* Load/Stress testing
+					</textarea>
 				</section>
 				<section data-markdown>
 					<textarea data-template>
+						<img class="float-right icon" src="./css/images/cut.svg"/>
 
-									### Seams/Services/Features
-									* Custom Development
-									* Extending Features/Workflows
-									* Data/Storage
-									* Backend/Admin Tooling UI
+						### Seams/Services/Features
+						* Custom Development
+						* Extending Features/Workflows
+						* Data/Storage
+						* Backend/Admin Tooling UI
 
-									https://www.phillipsj.net/posts/creating-seams/
-								</textarea>
+						https://www.phillipsj.net/posts/creating-seams/
+					</textarea>
 				</section>
 
 				<section data-markdown>
@@ -258,7 +267,7 @@
 				</section>
 				<section data-markdown>
 					<textarea data-template>
-						### Flexible Workflow
+						### Flexible Workflow (Creational / Structural Patterns)
 						* Pipes And Filters
 							* Builder
 							* Chain of Responsibility
@@ -342,16 +351,10 @@
 			</section>
 
 			<!-- //////////Final Architecture/////////// -->
-			<section>
+			<section class="transparent">
 				<section data-markdown>
 					<textarea data-template>
-							### Framework Architecture
-						</textarea>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-
-							### Implementation Architecture
+						<img class="fullscreen" src="./css/images/architecture.png" />
 						</textarea>
 				</section>
 			</section>
@@ -370,6 +373,7 @@
 									* Diminishing Returns
 								* Planning for the future
 								* Monolith vs Microservices
+								* http://www.blackwasp.co.uk/gofpatterns.aspx
 							</textarea>
 				</section>
 			</section>

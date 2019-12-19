@@ -36,19 +36,20 @@ img {
     left: 0 !important;
     top: 0 !important;
     transform: none !important;
-    zoom: 0 !important; }
+    zoom: 0 !important; 
+    display: flex;
+    justify-content: center;
+  }
   
   .reveal .title, .reveal .slides > section {
     display: flex !important;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%;
     top: 0;
-    left: 0;
+    left: 0; */
     justify-content: center;
-    margin-left: 75px; 
 
     background-color: rgba(0,0,0,.5);
-    margin: 2.5%;
     padding: 25px;
     width: 90%;
     height: 92% !important;
