@@ -53,6 +53,15 @@ img {
     border-radius: 20px;
 
 }
+
+
+
+.reveal .title, .reveal .slides > section > section{
+  display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
     .reveal .title__title {
       font-size: 3em !important;
       font-family: "Viga", sans-serif !important;

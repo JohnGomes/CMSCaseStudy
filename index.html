@@ -44,14 +44,14 @@
 			transform: rotate(45deg) scale(1.5);
 			}
 
-			@random(.2) {
+			@random(.3) {
 			:after {
 			content: ' ';
 			background: hsl(@rand(360), 60%, 70%);
 			@size: @r(3px, 15px);
 			color:white;
 			}
-			opacity: @pick-d(.5, .2, .3);
+			opacity: @pick-d(.5, .7, .6);
 			}
 		</css-doodle>
 		<div class="slides">
@@ -61,7 +61,7 @@
 					<img class="float-right icon" src="./css/images/boxes.svg"/>
 					<h1 class="title__title">Prepackaged CMS Case Study</h1>
 					<br>
-					<p class="title__tagline">John Gomes</p>
+					<p class="title__tagline bottom-left">John Gomes</p>
 				</section>
 
 
@@ -108,8 +108,7 @@
 						* Future Proofing (Business Requirements/Features)
 							* Swiss Army Knife (Ecosystem)
 						* "Cheaper" than a custom
-							* "That's *pretty much* exactly what I want!"
-							* Everything is already designed
+							* It's practically done already
 						
 						### Considerations
 						* Coupled to Decisions
