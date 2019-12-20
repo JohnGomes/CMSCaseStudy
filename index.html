@@ -70,27 +70,31 @@
 						<img class="float-right icon" src="./css/images/bullseye.svg"/>
 
 						### Goals
-						* Theorycraft a Flexible CMS Platform
-							* Lay Ground Work
+						* Discuss Flexibility
 							* Architecture
 							* Design patterns
 							* Clean Code
-							* Discuss considerations & trade offs
+							* Considerations & Trade Offs
+						* Theorycraft a Flexible CMS Platform
 						* Review Mock Architecture Diagram using Flexible CMS Platform
-							* High level implementation discuss
+
+						### Personas
+						* Creating a Flexible CMS Solution (Creator)
+						* Consuming a Flexible CMS Solution (Consumer)
+						* Comparison to Prepackaged Solution (Consultant)
 
 							
 					</textarea>
 				</section>
 
-				<section data-markdown>
+				<!-- <section data-markdown>
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/users.svg"/>
 
 						### Personas
-						* Creating a Flexible CMS solution (Creator)
-						* Consuming a Flexible CMS solution (Consumer)
-						* Comparison to Prepackaged solution (Consultant)
+						* Creating a Flexible CMS Solution (Creator)
+						* Consuming a Flexible CMS Solution (Consumer)
+						* Comparison to Prepackaged Solution (Consultant)
 						
 						### Themes
 						* Consulting
@@ -98,7 +102,7 @@
 						* Flexibility
 						* Architecture
 					</textarea>
-				</section>
+				</section> -->
 
 				<section data-markdown>
 					<textarea data-template>
@@ -106,12 +110,12 @@
 
 						### Allure of the Prepackaged solution
 						* Future Proofing (Business Requirements/Features)
-							* Swiss Army Knife (Ecosystem)
+							* Swiss Army Knife
 						* "Cheaper" than a custom
-							* It's practically done already
+							* Why reinvent the wheel?
 						
 						### Considerations
-						* Coupled to Decisions
+						* Coupled to Prepackaged Decisions
 							* Data, Api, Workflow
 						* Predetermined Flexibility
 						* Breaking the packaging can be painful
@@ -145,9 +149,9 @@
 							* Adapt/Change/Grow
 						* Assuming you will know better in the future
 							* Waterfall v Agile
-							* Social - Forming,Storming,Norming,Performing
+							* Social/Nature - Forming,Storming,Norming,Performing
 
-						http://www.softwarearchitecturenotes.com/architectureRequirements.html
+						<!-- http://www.softwarearchitecturenotes.com/architectureRequirements.html -->
 
 					</textarea>
 				</section>
@@ -162,7 +166,7 @@
 						* Low Coupling
 						* Adaptability
 						* Clear Architectural Bounds/ Separation
-						* Insurance (Cost of Insurance)
+						* Seams
 
 						### Techniques that give us feedback
 						* Unit Testing
@@ -171,11 +175,11 @@
 						* Load/Stress testing
 					</textarea>
 				</section>
-				<section data-markdown>
+				<!-- <section data-markdown>
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/cut.svg"/>
 
-						### Seams/Services/Features
+						### Our Targets
 						* Custom Development
 						* Extending Features/Workflows
 						* Data/Storage
@@ -183,7 +187,7 @@
 
 						https://www.phillipsj.net/posts/creating-seams/
 					</textarea>
-				</section>
+				</section> -->
 
 				<section data-markdown>
 					<textarea data-template>
@@ -199,7 +203,7 @@
 					* `-` Efficiency
 					* `-` Integrity
 
-					https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b
+					<!-- https://towardsdatascience.com/architecting-for-the-ilities-6fae9d00bf6b -->
 
 					</textarea>
 				</section>
@@ -214,23 +218,26 @@
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/book-dead.svg"/>
 					
-						### Devil's Advocate
+						### Where to stop? (Gregor Hope)
 						* Product Lock-In
 						* Version Lock-In - AngularJs vs Angular2
 						* Architecture Lock-In
 						* Platform Lock-In
 						* Skills Lock-In
 						* Mental Lock-In
-						https://martinfowler.com/articles/oss-lockin.html
-						Gregor Hohpe
+						<!-- https://martinfowler.com/articles/oss-lockin.html
+						Gregor Hohpe -->
 
 						### Keep in Mind
 						* MVP, YAGNI, 80/20
 						* Effort, Expense, Complexity
+
+						### Lock in Matrix
+						* Caution, Acceptable, Disposable, Ideal
 					</textarea>
 				</section>
 
-				<section data-markdown>
+				<!-- <section data-markdown>
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/unlock.svg"/>
 
@@ -241,7 +248,7 @@
 						</div>
 				
 					</textarea>
-				</section>
+				</section> -->
 
 				<!-- <section data-markdown>
 					<textarea data-template>
@@ -261,7 +268,7 @@
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/cogs.svg"/>
 
-						### Flexible Custom Development
+						### Flexible Custom Development (S.O.L.I.D)
 						* Seams / Integration Points
 							* Interfaces
 							* Virtual Methods
@@ -276,8 +283,8 @@
 
 						### Flexible Workflow (Creational / Structural Patterns)
 						* Pipes And Filters
-							* Builder
-							* Chain of Responsibility
+						* Builder
+						* Chain of Responsibility
 						* Adapter 
 						* Decorator
 					</textarea>
@@ -289,11 +296,11 @@
 						### Flexible Architecture (Behavioral Patterns)
 						* Communication Patterns/Technologies
 							* Pub Sub, Observer, Mediator
-								* Message Queue/Bus (ESB)
+								* Message Queue/Bus (ESB), Gateway
 						* Microservices
 
 
-							https://en.wikipedia.org/wiki/Behavioral_pattern
+							<!-- https://en.wikipedia.org/wiki/Behavioral_pattern -->
 					</textarea>
 				</section>
 				<section data-markdown>
@@ -304,11 +311,12 @@
 						* Multi Schema
 						* Multi Databases 
 							* SQL + NoSQL + Graph
+						* Views, Stored Procs
 						* ORM Wrapper
 						* OData
 						* Code First
 
-						https://jsonapi.org/
+						<!-- https://jsonapi.org/ -->
 						
 					</textarea>
 				</section>
@@ -322,16 +330,16 @@
 						<img class="float-right icon" src="./css/images/astronaut.svg"/>
 
 						###  Backend Tooling/ Admin UI
-						* What / Why
-						* How
-						* Built in Ecosystem
+						* Self Service
 							* Page Updates
 							* Page Workflow
+						* Feature Depth
+							* UX Tradeoff, Complexity
 
 						Static HTML, Isomorphic
 						</textarea>
 				</section>
-				<section data-markdown>
+				<!-- <section data-markdown>
 					<textarea data-template>
 						<img class="float-right icon" src="./css/images/pool.svg"/>
 
@@ -347,7 +355,7 @@
 
 						UX Tradeoff
 						</textarea>
-				</section>
+				</section> -->
 
 				<section data-markdown>
 					<textarea data-template>
@@ -377,7 +385,7 @@
 
 
 			<!-- /////////// NOTES /////////////// -->
-			<section>
+			<!-- <section>
 
 				<section data-markdown>
 					<textarea data-template>
@@ -391,7 +399,7 @@
 								* http://www.blackwasp.co.uk/gofpatterns.aspx
 							</textarea>
 				</section>
-			</section>
+			</section> -->
 		</div>
 	</div>
 
